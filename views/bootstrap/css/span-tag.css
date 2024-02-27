@@ -1,0 +1,87 @@
+   
+   /* This is for first carousel image */
+   .span-1
+   {
+       color:lightskyblue;
+       text-align:center;
+       font-size:2rem;
+      
+   }
+   
+   #span-2
+   {
+       color:lightskyblue;
+       text-align:center;
+       font-size:4rem;
+       font-weight:bold;
+   }
+   
+   
+        /* This is for third carousel image */
+   .span-3
+   {
+       color:goldenrod;
+       text-align:center;
+       font-family:Georgia;
+       font-size:2rem;
+      
+   }
+        
+   #span-4
+   {
+       color:goldenrod;
+       text-align:center;
+       font-size:4rem;
+   }
+   
+       /* This is for third carousel image */
+   #span-5
+   {
+        display: inline-block;
+        margin-left:140px ;
+        margin-top: 190px;
+        font-weight:bold;
+        color:lightseagreen;
+        font-family: cursive; 
+        font-size:2rem;
+        text-align:center;
+   }
+   
+   #span-6{
+       display: inline-block;
+       box-shadow:10px 10px 5px;
+       background-color:darkcyan;
+       margin-left:220px; 
+       margin-top:30px;
+       color:plum;
+       text-align:center;
+       font-size:3rem;
+       font-weight:bold;
+   }
+   
+   /* This is for fourth carousel image */
+   #span-7
+   {
+       display: inline-block;
+       margin-left:150px ;
+       margin-top:190px;
+       font-weight:bold;
+       color:darkcyan;
+       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       font-size:4rem;
+       text-align:center;
+   }
+   
+   #span-8
+   {
+       display: inline-block;
+       background-color:black;
+       margin-left:250px; 
+       margin-top:30px;
+       color:white;
+       text-align:center;
+       font-size:2rem;
+       font-weight:bold;
+   }
+   
+   

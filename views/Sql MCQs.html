@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="CSS-Files/hr-interview.css">
+  <title>Document</title>
+  <style>
+    .correct {
+      color: lightgreen;
+      background-color:green;
+      
+    }
+
+    .incorrect{
+      color: red;
+      background-color:darksalmon;
+    }
+    .radio-button-span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+}
+
+  .radio-button-span span {
+  /* margin-left: 4px; */
+  padding-left:7px;
+  color:green;
+  background-color:lightgreen;  /* it applies the bg color only on the span tag */
+  width: 100%;
+  border-radius: 20px;
+}
+.radio1button-span {
+     width: 100%;
+      display: flex;
+      align-items: center;
+}
+
+ 
+
+.radio1button-span span {
+  color:darkred;
+  background-color:lightsalmon;
+  width: 100%;
+  border-radius:20px ;
+    /* margin-left: 4px; */
+    padding-left:7px;
+}
+input[type=radio] {
+         appearance:none ;
+         padding: 5px;
+         background-color:white;
+         border:1px solid black;
+         border-radius:50%;
+      }
+      input[type=radio]:checked {
+        background-color: cadetblue;
+      }
+  /* body {
+  background-image: url("images/pic4.png");
+  background-size: cover;
+  background-position: center center;
+/* } */
+      /* body{
+        background-image:linear-gradient(to bottom,#afd9d5,#6f6f6f);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      } */ */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top pb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/pic13.jpg" width="50px" height="50px" style="border-radius: 50%;">Prep Placed</a>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="About-us.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Contact-us.html">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Admin_Signup.html">Admin Signup</a>
+                </li>
+                
+
+            </ul>
+           
+        </div>
+    </div>
+</nav>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-lg-2 col-md-2">
+        <img src="images/3d-render-software-testing-concept-with-computer-removebg-preview.png" height="150px" width="270px" alt="">
+      </div>
+      <div class="col-lg-8 col-md-8">
+        <h2 style="text-shadow: 2px 2px 5px lightslategray;text-align: center;margin-top: 40px;font-style: italic;">SQL(Structured Query Language) MCQs</h2>
+      </div>
+  
+    </div>
+   </div>
+
+ 
+ <!-- Ques-1 -->
+ <div class="container mt-5">
+  <div class="row" >
+    <div class="col-lg-8"> 
+      <form id="quiz">
+        <p style="font-size: larger;">Which of the following are some common RDBMS in use?</p>
+        <div id="oracleOption" ><input type="radio" name="ans1" value="Oracle" style="margin-right: 5px;"> <span style="padding-left:7px;">Oracle</span></div>
+        <div id="net beansOption"><input type="radio" name="ans1" value="Net Beans" style="margin-right: 5px;"> <span style="padding-left:7px;">Net Beans</span></div>
+        <div id="pycharmOption"><input type="radio" name="ans1" value="Pycharm" style="margin-right: 5px;"> <span style="padding-left:7px;">Pycharm</span></div><br>
+        <input type="button" value="Show Answer" onclick="checkAnswer1()">
+      </form>
+    </div>
+  </div>
+ </div>
+ 
+ <!-- Ques-2 -->
+ <div class="container mt-5">
+  <div class="row" >
+    <div class="col-lg-8"> 
+      <form id="quiz">
+        <p style="font-size: larger;">What command is used to create a new table in SQL?</p>
+        <div id="create tableOption" ><input type="radio" name="ans2" value="Create Table" style="margin-right: 5px;"> <span style="padding-left:7px;">Create Table</span></div>
+        <div id="classobjectOption"><input type="radio" name="ans2" value="classObject" style="margin-right: 5px;"> <span style="padding-left:7px;">classObject</span></div>
+        <div id="noneOption"><input type="radio" name="ans2" value="None" style="margin-right: 5px;"> <span style="padding-left:7px;">None</span></div><br>
+        <input type="button" value="Show Answer" onclick="checkAnswer2()">
+      </form>
+    </div>
+  </div>
+ </div>
+
+ <!-- Ques-3 -->
+ <div class="container mt-5">
+    <div class="row" >
+      <div class="col-lg-8"> 
+        <form id="quiz">
+          <p style="font-size: larger;">Which of the following are not the types of Unicode character string types in SQL?</p>
+          <div id="ncharOption" ><input type="radio" name="ans3" value="nChar" style="margin-right: 5px;"> <span style="padding-left:7px;">nChar</span></div>
+          <div id="ntextOption"><input type="radio" name="ans3" value="nText" style="margin-right: 5px;"> <span style="padding-left:7px;">nText</span></div>
+          <div id="nstringOption"><input type="radio" name="ans3" value="nString" style="margin-right: 5px;"> <span style="padding-left:7px;">nString</span></div><br>
+          <input type="button" value="Show Answer" onclick="checkAnswer3()">
+        </form>
+      </div>
+    </div>
+   </div>
+
+   <!-- Ques-4 -->
+    <div class="container mt-5">
+    <div class="row" >
+      <div class="col-lg-8"> 
+        <form id="quiz">
+          <p style="font-size: larger;">Which of the following commands is used to delete all rows and free up space from a table?</p>
+          <div id="truncateOption" ><input type="radio" name="ans4" value="Truncate" style="margin-right: 5px;"> <span style="padding-left:7px;">Truncate</span></div>
+          <div id="dropOption"><input type="radio" name="ans4" value="Drop" style="margin-right: 5px;"> <span style="padding-left:7px;">Drop</span></div>
+          <div id="deleteOption"><input type="radio" name="ans4" value="Delete" style="margin-right: 5px;"> <span style="padding-left:7px;">Delete</span></div><br>
+          <input type="button" value="Show Answer" onclick="checkAnswer4()">
+        </form>
+      </div>
+    </div>
+   </div>       
+
+   <!-- Ques-5 -->
+   <div class="container mt-5">
+    <div class="row" >
+      <div class="col-lg-8" style="margin-bottom: 30px;"> 
+        <form id="quiz">
+          <p style="font-size: larger;">Which of the following commands is not a part of Data Control Language?</p>
+          <div id="grantOption" ><input type="radio" name="ans5" value="Grant" style="margin-right: 5px;"> <span style="padding-left:7px;">Grant</span></div>
+          <div id="revokeOption"><input type="radio" name="ans5" value="Revoke" style="margin-right: 5px;"> <span style="padding-left:7px;">Revoke</span></div>
+          <div id="pickOption"><input type="radio" name="ans5" value="Pick" style="margin-right: 5px;"> <span style="padding-left:7px;">Pick</span></div><br>
+          <input type="button" value="Show Answer" onclick="checkAnswer5()">
+        </form>
+      </div>
+    </div>
+   </div>       
+
+
+  <script>
+    function checkAnswer1() {
+      var selectedAnswer = document.querySelector('input[name="ans1"]:checked').value;
+    
+// var id=document.getElementById("radioone");
+      console.log();
+      var correctAnswer = 'Oracle';
+    
+
+      // Check if the selected answer is correct.
+      if (selectedAnswer == correctAnswer) {
+        // Change the color of the correct answer to green.
+        document.getElementById(selectedAnswer.toLowerCase() + "Option").classList.add("radio-button-span");
+       
+      } else {
+        // Display "Incorrect" and the correct answer in red text.
+        // answer.style.color = "red";
+        document.getElementById(selectedAnswer.toLowerCase() + "Option").classList.add("radio1button-span");
+        // selectedAnswer=Paris and convert it into lower case then concatenate it with Options which make parisOption then it will match with our predefined id of span tag in the input tag
+        
+      }
+    }
+
+      function checkAnswer2() {
+      
+      var selectedAnswer1 = document.querySelector('input[name="ans2"]:checked').value;
+      var correctAnswer1 = 'Create Table';
+      if (selectedAnswer1 == correctAnswer1) {
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio-button-span");
+      
+      } else {
+     
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio1button-span");
+        
+        
+      }
+    }
+
+    function checkAnswer3() {
+      
+      var selectedAnswer1 = document.querySelector('input[name="ans3"]:checked').value;
+      var correctAnswer1 = 'nString';
+      if (selectedAnswer1 == correctAnswer1) {
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio-button-span");
+       
+      } else {
+     
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio1button-span");
+        
+        
+      }
+    }
+
+    function checkAnswer4() {
+      
+      var selectedAnswer1 = document.querySelector('input[name="ans4"]:checked').value;
+      var correctAnswer1 = 'Truncate';
+      if (selectedAnswer1 == correctAnswer1) {
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio-button-span");
+        
+      } else {
+     
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio1button-span");
+        
+      
+      }
+    }
+
+    function checkAnswer5() {
+      
+      var selectedAnswer1 = document.querySelector('input[name="ans5"]:checked').value;
+      var correctAnswer1 = 'Pick';
+      if (selectedAnswer1 == correctAnswer1) {
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio-button-span");
+        
+      } else {
+     
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio1button-span");
+        
+   
+      }
+    }
+  
+  
+    
+      
+    </script>
+  <!-- <h6 id="Ans"></h6> -->
+</body>
+</html>

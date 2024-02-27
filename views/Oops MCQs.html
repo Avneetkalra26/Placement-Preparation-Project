@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="CSS-Files/hr-interview.css">
+  <title>Document</title>
+  <style>
+    .correct {
+      color: lightgreen;
+      background-color:green;
+      
+    }
+
+    .incorrect{
+      color: red;
+      background-color:darksalmon;
+    }
+    .radio-button-span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+}
+
+  .radio-button-span span {
+  /* margin-left: 4px; */
+  padding-left:7px;
+  color:green;
+  background-color:lightgreen;  /* it applies the bg color only on the span tag */
+  width: 100%;
+  border-radius: 20px;
+}
+.radio1button-span {
+     width: 100%;
+      display: flex;
+      align-items: center;
+}
+
+ 
+
+.radio1button-span span {
+  color:darkred;
+  background-color:lightsalmon;
+  width: 100%;
+  border-radius:20px ;
+    /* margin-left: 4px; */
+    padding-left:7px;
+}
+input[type=radio] {
+         appearance:none ;
+         padding: 5px;
+         background-color:white;
+         border:1px solid black;
+         border-radius:50%;
+      }
+      input[type=radio]:checked {
+        background-color: cadetblue;
+      }
+  /* body {
+  background-image: url("images/pic4.png");
+  background-size: cover;
+  background-position: center center;
+/* } */
+      /* body{
+        background-image:linear-gradient(to bottom,#afd9d5,#6f6f6f);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      } */ */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top pb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/pic13.jpg" width="50px" height="50px" style="border-radius: 50%;">Prep Placed</a>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="About-us.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Contact-us.html">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="Admin_Signup.html">Admin Signup</a>
+                </li>
+                
+
+            </ul>
+           
+        </div>
+    </div>
+</nav>
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-2 col-md-2">
+      <img src="images/computer_1-removebg-preview.png" height="150px" width="200px" alt="">
+    </div>
+    <div class="col-lg-8 col-md-8">
+      <h2 style="text-shadow: 2px 2px 5px lightslategray;text-align: center;margin-top: 40px;font-style: italic;">OOPs(Object Oriented Programming Language) MCQs</h2>
+    </div>
+
+  </div>
+ </div>
+ 
+ <!-- Ques-1 -->
+ <div class="container mt-5">
+  <div class="row" >
+    <div class="col-lg-8"> 
+    
+        <p style="font-size: larger;">When is the object created with a new keyword?</p>
+        <div id="runtimeOption" ><input type="radio" name="ans1" value="Runtime" style="margin-right: 5px;"> <span style="padding-left:7px;">Runtime</span></div>
+        <div id="compile timeOption"><input type="radio" name="ans1" value="Compile Time" style="margin-right: 5px;"> <span style="padding-left:7px;">Compile Time</span></div>
+        <div id="both a and bOption"><input type="radio" name="ans1" value="Both a and b" style="margin-right: 5px;"> <span style="padding-left:7px;">Both a and b</span></div><br>
+        <input type="button" value="Show Answer" onclick="checkAnswer1()">
+      
+    </div>
+  </div>
+ </div>
+ 
+ <!-- Ques-2 -->
+ <div class="container mt-5">
+  <div class="row" >
+    <div class="col-lg-8"> 
+      
+        <p style="font-size: larger;">What is the Implicit Return Type of Constructor?</p>
+        <div id="voidOption" ><input type="radio" name="ans2" value="void" style="margin-right: 5px;"> <span style="padding-left:7px;">void</span></div>
+        <div id="classobjectOption"><input type="radio" name="ans2" value="classObject" style="margin-right: 5px;"> <span style="padding-left:7px;">classObject</span></div>
+        <div id="noneOption"><input type="radio" name="ans2" value="None" style="margin-right: 5px;"> <span style="padding-left:7px;">None</span></div><br>
+        <input type="button" value="Show Answer" onclick="checkAnswer2()">
+     
+    </div>
+  </div>
+ </div>
+
+ <!-- Ques-3 -->
+ <div class="container mt-5">
+    <div class="row" >
+      <div class="col-lg-8"> 
+       
+          <p style="font-size: larger;">Identify the incorrect constructor type</p>
+          <div id="copy constructorOption" ><input type="radio" name="ans3" value="Copy Constructor" style="margin-right: 5px;"> <span style="padding-left:7px;">Copy Constructor</span></div>
+          <div id="default constructorOption"><input type="radio" name="ans3" value="Default Constructor" style="margin-right: 5px;"> <span style="padding-left:7px;">Default Constructor</span></div>
+          <div id="friend constructorOption"><input type="radio" name="ans3" value="Friend Constructor" style="margin-right: 5px;"> <span style="padding-left:7px;">Friend Constructor</span></div><br>
+          <input type="button" value="Show Answer" onclick="checkAnswer3()">
+        
+      </div>
+    </div>
+   </div>
+
+   <!-- Ques-4 -->
+    <div class="container mt-5">
+    <div class="row" >
+      <div class="col-lg-8"> 
+       
+          <p style="font-size: larger;">Choose the option below which is not a memeber of the class.</p>
+          <div id="friend functionOption" ><input type="radio" name="ans4" value="Friend Function" style="margin-right: 5px;"> <span style="padding-left:7px;">Friend Function</span></div>
+          <div id="static functionOption"><input type="radio" name="ans4" value="Static Function" style="margin-right: 5px;"> <span style="padding-left:7px;">Static Function</span></div>
+          <div id="virtual functionOption"><input type="radio" name="ans4" value="Virtual Function" style="margin-right: 5px;"> <span style="padding-left:7px;">Virtual Function</span></div><br>
+          <input type="button" value="Show Answer" onclick="checkAnswer4()">
+       
+      </div>
+    </div>
+   </div>       
+
+ <div class="container mt-5">   
+    <div class="row" >
+      <div class="col-lg-8" style="margin-bottom: 30px;"> 
+        <form id="quiz">
+          <p style="font-size: larger;">Total types of constructors in C++ are ?</p>
+          <div id="oneOption" ><input type="radio" name="ans5" value="One" style="margin-right: 5px;"> <span style="padding-left:7px;">One</span></div>
+          <div id="twoOption"><input type="radio" name="ans5" value="Two" style="margin-right: 5px;"> <span style="padding-left:7px;">Two</span></div>
+          <div id="threeOption"><input type="radio" name="ans5" value="Three" style="margin-right: 5px;"> <span style="padding-left:7px;">Three</span></div><br>
+          <input type="button" value="Show Answer" onclick="checkAnswer5()">
+        </form>
+      </div>
+    </div>
+   </div>
+
+  <script>
+    function checkAnswer1() {
+      var selectedAnswer = document.querySelector('input[name="ans1"]:checked').value;
+    
+// var id=document.getElementById("radioone");
+      console.log();
+      var correctAnswer = 'Runtime';
+      // var answer = document.getElementById("Ans");
+
+      // Check if the selected answer is correct.
+      if (selectedAnswer == correctAnswer) {
+        // Change the color of the correct answer to green.
+        document.getElementById(selectedAnswer.toLowerCase() + "Option").classList.add("radio-button-span");
+        answer.textContent = "Correct";
+      } else {
+        // Display "Incorrect" and the correct answer in red text.
+        // answer.style.color = "red";
+        document.getElementById(selectedAnswer.toLowerCase() + "Option").classList.add("radio1button-span");
+        // selectedAnswer=Paris and convert it into lower case then concatenate it with Options which make parisOption then it will match with our predefined id of span tag in the input tag
+        answer.textContent = `Incorrect. The correct answer is ${correctAnswer}`;
+      }
+    }
+
+      function checkAnswer2() {
+      
+      var selectedAnswer1 = document.querySelector('input[name="ans2"]:checked').value;
+      var correctAnswer1 = 'classObject';
+      if (selectedAnswer1 == correctAnswer1) {
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio-button-span");
+        answer.textContent = "Correct";
+      } else {
+     
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio1button-span");
+        
+        answer.textContent = `Incorrect. The correct answer is ${correctAnswer}`;
+      }
+    }
+
+    function checkAnswer3() {
+      
+      var selectedAnswer1 = document.querySelector('input[name="ans3"]:checked').value;
+      var correctAnswer1 = 'Friend Constructor';
+      if (selectedAnswer1 == correctAnswer1) {
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio-button-span");
+        answer.textContent = "Correct";
+      } else {
+     
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio1button-span");
+        
+        answer.textContent = `Incorrect. The correct answer is ${correctAnswer}`;
+      }
+    }
+
+    function checkAnswer4() {
+      
+      var selectedAnswer1 = document.querySelector('input[name="ans4"]:checked').value;
+      var correctAnswer1 = 'Friend Fucntion';
+      if (selectedAnswer1 == correctAnswer1) {
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio-button-span");
+        answer.textContent = "Correct";
+      } else {
+     
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio1button-span");
+        
+        answer.textContent = `Incorrect. The correct answer is ${correctAnswer}`;
+      }
+    }
+    
+    function checkAnswer5() {
+      
+      var selectedAnswer1 = document.querySelector('input[name="ans5"]:checked').value;
+      var correctAnswer1 = 'Three';
+      if (selectedAnswer1 == correctAnswer1) {
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio-button-span");
+        answer.textContent = "Correct";
+      } else {
+     
+        document.getElementById(selectedAnswer1.toLowerCase() + "Option").classList.add("radio1button-span");
+        
+        answer.textContent = `Incorrect. The correct answer is ${correctAnswer}`;
+      }
+    }
+  
+  
+    
+      
+    </script>
+  <h6 id="Ans"></h6>
+</body>
+</html>

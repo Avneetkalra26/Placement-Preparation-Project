@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Admin Signup</title>
+    <link rel="stylesheet" href="CSS-Files/Admin_Signup.css">
+    
+</head>
+<body>
+    <div class="form-wrapper">
+        <h2>Admin Signup</h2>
+           <form id="form-reset">
+            <div class="form-control">
+                <input type="text" id="admin_name" name="admin_name" required>
+                <label for="admin_name">Name</label>
+            </div>
+
+            <div class="form-control">
+                <input type="text"  id="email" name="email" required>
+                <label for="email">Email or phone number</label>
+            </div>
+            <div class="form-control">
+                <input type="password" id ="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            <!-- <button type="submit" onclick="add_admin()">LOGIN</button> -->
+            <input type="button" id="button" value="Sign Up" onclick="add_admin()">
+        </form>
+        
+    </div>
+    <script>
+        var add_admin = () =>{
+            var name = document.getElementById("admin_name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+    
+            var formData = new FormData();
+            formData.append("admin_name",name);
+            formData.append("email",email);//give in routes
+            formData.append("pass",password);//give in routes
+    
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                 if(this.readyState == 4 && this.status === 200)
+                 {
+                    var res = this.response;
+                    document.getElementById("form-reset").reset();
+                    // document.getElementById("response").innerHTML= res;
+                    if (this.response == "added") {
+                            Swal.fire({
+                                icon: "success",
+                                title: "Admin Added Successfully" 
+                            });
+                            
+                        } else {
+                            Swal.fire({
+                                icon: "warning",
+                                title: "Internal Server Error."
+                            });
+                        }
+                 }
+            }
+            xhttp.open("POST","Admin-signup",true);
+            xhttp.send(formData);
+    
+        }
+    </script>
+</body>
+</html>

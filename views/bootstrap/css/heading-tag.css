@@ -1,0 +1,58 @@
+
+/* This is for second carousel image */
+
+#heading-1
+{
+      font-weight:bolder;
+      text-decoration-line:underline;
+      text-decoration-style:wavy;
+      color:olive;
+      font-style:italic;
+}
+
+#heading-2
+{
+    color:goldenrod;
+    text-align:center;
+    font-family:Georgia;
+    margin-top:130px;
+}
+
+/* For Kids Section */
+#heading-3{
+    display: inline;
+    background-color:beige;
+    color:palevioletred;
+    font-size:3rem;
+    font-weight:bold;
+    box-shadow:3px 8px 5px;
+    
+}
+@media screen and (max-width:700px) 
+{
+   #heading-3{
+   font-size:2rem; 
+ 
+}
+}
+
+#heading-4{
+    display: inline;
+    background-color:beige;
+    color:lightblue;
+    font-size:3rem;
+    font-weight:bold;
+    box-shadow:3px 8px 5px;
+    
+}
+@media screen and (max-width:700px) 
+{
+   #heading-4{
+   font-size:2rem; 
+ 
+}
+}
+
+#heading-5{
+    color:crimson;
+}

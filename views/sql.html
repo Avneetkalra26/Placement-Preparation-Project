@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="CSS-Files/hr-interview.css">
+    <style>
+        #sql-span-1{
+            text-align: center;
+            box-shadow: 5px 5px 5px burlywood;
+            border-radius: 50px;
+            border:3px solid lightcoral;
+            padding: 10px;
+            font-size:20px;
+        }
+        #sql-span-2{
+              text-align: center;
+              box-shadow: 7px 7px 7px #AAC8A7;
+              border-radius: 50px;
+              border:3px solid #85E6C5;
+              padding: 10px;
+              font-size: 25px;
+              font-style: italic;
+              /* font-weight: bold; */
+             
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top pb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/pic13.jpg" width="50px" height="50px" style="border-radius: 50%;">Prep Placed</a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="About-us.html">About Us</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contact-us.html">Contact Us</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Admin_Signup.html">Admin Signup</a>
+                    </li>
+                    
+    
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+    <h1 style=" text-shadow: 2px 2px 5px lightseagreen;text-align: center;margin-top: 20px;font-style: italic;">SQL(Structured Query Language) Interview Questions and Answers</h1>
+    <div class="container mt-5" style="background-color:#FAEAB1;">
+           <div class="row">
+            <div class="col-lg-12">
+                <p style="text-align: center;margin-top: 30px;"><span id="sql-span-1">What is SQL?</span></p>
+                <p style="text-align: justify;margin-top:30px;">SQL is an abbreviation for Structured Query Language. SQL is a standard query language that is used for creating a relational database and performs a number of operations and manipulation of the data. SQL was originated in 1970. SQL is a Database language that includes functionalities like database creation, deletion, fetching rows and modifying rows, etc. Many times it is pronounced as ‘sequel.’</p>
+                <h5 style="font-weight: bold;">Functions of SQL:-</h5>
+                
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <ul>
+                    <li>SQL can execute queries against a database.</li>
+                    <li>can retrieve data from a database.</li>
+                    <li>SQL can insert records in a database.</li>
+                    <li>SQL can update records in a database.</li>
+                    <li>SQL can delete records from a database.</li>
+                    <li>SQL can create new databases.</li>
+                    <li>SQL can create new tables in a database.</li>
+                    <li>SQL can create stored procedures in a database.</li>
+                    <li>SQL can create views in a database.</li>
+                    <li>SQL can set permissions on tables, procedures, and views.</li>
+            </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12">
+                
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="images/sql-icon.png" alt="" width="100%" height="200px">
+            </div>
+        </div>
+           </div>
+    </div>
+     <p style="text-align: center; margin-top: 50px;"><span id="sql-span-2">Top SQL Interview Questions and Answers</span></p>
+     <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 1. Is SQL-supported programming?
+            </h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. </span>Basically, SQL is a command-based programming language but it doesn’t contain any control flow statements.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 2. State the difference between char and varchar.</h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. </span>Both char and varchar are datatypes only, used for character strings. The only difference between them is the length. Varchar is used for a variable length of strings and char is used for a fixed length of strings. In char data type, if the length of the string is less than the fixed length then it is padded with blank spaces to attain the fixed length. While varchar, padding won't be done.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 3. </h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul>
+                    <li><span style="font-weight: bold;">Inner Join: </span>select column_name From table1 INNER JOIN table2 on table1.column_name = table2.column_name;</li>
+                    <li><span style="font-weight: bold;">Outer Join: </span>select column_name From table1 OUTER JOIN table2 on table1.column_name = table2.column_name;</li>
+                    <li><span style="font-weight: bold;">Left Join: </span>elect column_name From table1 LEFT JOIN table2 on table1.column_name = table2.column_name;</li>
+                    <li><span style="font-weight: bold;">Right Join: </span>select column_name From table1 RIGHT JOIN table2 on table1.column_name = table2.column_name;</li>
+                    <li><span style="font-weight: bold;">Full Join: </span>select column_name From table1 INNER JOIN table2 on table1.column_name = table2.column_name WHERE condition;</li>
+                </ul>  
+            </div></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 4. What are tables and Fields?</h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. </span>Data organized in a model with Rows and Columns is called a table. Rows are horizontal and Columns can be categorized as vertical. A table has a specified number of columns called fields but can have an infinite number of rows which is called a record.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 5. What is DBMS? Explain types of DBMS.</h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul>
+                    <li><span style="font-weight: bold;">Relational DBMS: </span>Data is stored in tables(relations). This involves the concept of tuples, attributes.</li>
+                    <li><span style="font-weight: bold;">Non-Relational DBMS: </span>In this, there won’t be any concept of tables, tuples, attributes.</li>
+                </ul>  
+            </div></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 6. What is Data Integrity?</h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. </span> The assurance of consistency and accuracy of the data over the entire life cycle is Data Integrity. It is a critical aspect of the implementation, design, and usage of any system that processes, stores or retrieves data. It also defines integrity constraints to enforce business rules on the data when it is entered into an application or a database.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 7. What is the SELECT statement?</h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. </span>SELECT is a SQL command that is used for selecting data from a database. The data which is returned is saved in a result table, called the result-set.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 8. What is normalization?</h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. </span>Normalization is a way of organizing fields and tables of the database in a way that reduces redundancy and dependency. The main objective is to create a single table where operations like add, delete or modify can be performed on the field</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 9. What do you mean by “Trigger” in SQL? </h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. </span>A trigger is a special type of stored procedure that executes automatically in place or after data changes. It allows executing a batch of code when an insert, update, or any other query is executed against a specific table.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <h3 class="basic-ques-heading3 border-color1">&nbsp;Ques 10. What is a constraint?
+            </h3>
+            <p class="basic-ques-para2"><span style="font-weight: bold;">Ans. <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul>
+                    <li>UNION</li>
+                    <li>UNION ALL</li>
+                    <li>INTERSECT</li>
+                    <li>MINUS</li>
+                </ul>  
+            </div></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

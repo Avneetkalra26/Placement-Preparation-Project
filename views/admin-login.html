@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>>
+    <link rel="stylesheet" href="CSS Files/style.css">
+    <link rel="stylesheet" href="https://m3.material.io/styles/color/dynamic-color/user-generated-color#4e93a88c-91fb-45b8-af97-ccb381949bde">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+    .error{
+      color:orangered;
+    }
+</style>
+</head>
+
+<body id="body_style">
+
+
+<div class="container mt-4">
+    <div class="col-lg-6 offset-lg-3 py-5">
+        <div class="card">
+            <div class="card-header bg-pink2">
+                <h2 class="text-white">Admin Login</h2>
+            </div>
+            <div class="card-body">
+                <form id="adminLogin">
+                    <div class="mb-3">
+                        <label for="email">Enter Email</label>
+                        <input data-rule-required="true"
+                               type="email" id="email" name="email" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password">Enter Password</label>
+                        <input data-rule-required="true"
+                               minlength="2"
+                               type="password" id="password" name="password" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <button onclick="AdminLogin()" type="button" class="btn btn-pink" style="border-radius:60px">
+                            LOGIN
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+     var AdminLogin = () => {
+        
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            var formData = new FormData();
+            formData.append("email", email);
+            formData.append("password", password);
+
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // console.log(this.response);
+
+                    if (this.response == "invalid") {
+                        Swal.fire({
+                            icon: "warning",
+                            title: "Invalid Email or Password"
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Login Success"
+                        });
+
+                        
+                    }
+
+                }
+            }
+            http.open("POST", "/admin-login", true);
+            http.send(formData);
+        }
+</script>
+</body>
+</html>

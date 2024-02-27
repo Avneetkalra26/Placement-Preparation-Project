@@ -1,0 +1,32 @@
+::selection{
+background-color: lightcoral;
+}
+
+.basic-ques-heading3{
+    margin-top: 20px;
+    font-style: italic;
+    font-size:25px;
+}
+
+.border-color1
+{
+    border-left: #FBCEB5 solid 5px;
+}
+.border-color2
+{
+    border-left: #7FB77E solid 5px;
+}
+
+.basic-ques-heading6{
+    font-weight: bold;
+}
+
+.basic-ques-para{
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.basic-ques-para2{
+    text-align: justify;
+}
+

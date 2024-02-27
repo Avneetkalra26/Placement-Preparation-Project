@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <title>Document</title>
+<script>
+    
+    var http =  new XMLHttpRequest();
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            // console.log(this.response);
+            // console.log(JSON.parse(this.response));
+            var response = JSON.parse(this.response);
+            var tableTag=`<table class="table table-bordered table-danger table-hover mt-5 text-center">`;
+                tableTag +=` <thead><tr><th>TCS NQT Paper Pattern 2023 Foundation Section</th><th>Time(in minutes)</th></tr></thead>`;
+                
+                tableTag += `<tbody>`;
+                response.forEach(function(value) {
+                // console.log(value);  
+                tableTag += `<tr>`;
+                tableTag += `<td>${value.Foundation_Section}</td>`;
+                tableTag += `<td>${value.Time}</td>`;
+                tableTag += `</tr>`;
+            });
+
+                tableTag += `<tbody>`;
+                tableTag += `</table>`;
+                document.getElementById("userData").innerHTML=tableTag;
+           }
+    }
+    http.open("GET","/get-tcs-data",true);
+    http.send();
+
+    var http1 =  new XMLHttpRequest();
+    http1.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            // console.log(this.response);
+            // console.log(JSON.parse(this.response));
+           
+              var response = JSON.parse(this.response);
+              var tableTag=`<table class="table table-bordered table-success table-hover mt-5 text-center" >`;
+                tableTag +=`  <thead><tr><th>TCS NQT Paper Pattern 2023 Advanced Section</th><th>Time(in minutes)</th></tr></thead>`;
+                
+                tableTag += `<tbody>`;
+                response.forEach(function(value) {
+                // console.log(value);  
+                tableTag += `<tr>`;
+                tableTag += `<td>${value.Advanced_Section}</td>`;
+                tableTag += `<td>${value.Time}</td>`;
+                tableTag += `</tr>`;
+            });
+
+                tableTag += `<tbody>`;
+                tableTag += `</table>`;
+                
+                
+    
+              document.getElementById("userData_1").innerHTML=tableTag;
+
+        }
+    }
+   
+
+    http1.open("GET","/get-tcs-data-1",true);
+    http1.send();
+
+</script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top pb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/pic13.jpg" width="50px" height="50px" style="border-radius: 50%;">Prep Placed</a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="About-us.html">About Us</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contact-us.html">Contact Us</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Admin_Signup.html">Admin Signup</a>
+                    </li>
+                    
+    
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 style="text-shadow: 2px 2px 5px lightslategray;text-align: center;margin-top: 40px;font-style: italic;">TCS Syllabus</h1>
+            <p style="margin-top: 25px;">TCS NQT has updated its TCS NQT Syllabus 2023 batches. They have introduced a new curriculum for this year hiring. Some new sections have been added in their selection process. TCS NQT Syllabus for 2023 batch is explained in detail in this article, make sure you go through the entire syllabus, so that you don't miss any point</p>
+            <p style="margin-top: 25px;font-weight: bold;">IMPORTANT NOTE:</p>
+            <ul>
+                <li>There will be no negative marking.</li>
+                <li>TCS NQT is Non-adaptive this year</li>
+                <li>You will not get any extra rough paper in the exam as a calculator and Rough Paper will be available on your Desktop Screen. You are not allowed to move your eyes down while giving the examination.</li>
+            </ul>
+    </div>
+    </div>
+  </div> 
+  <div class="container" id="userData"></div>
+  <div class="container" id="userData_1"></div>
+
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <p style="margin-top: 25px;">Tips for preparing for the TCS NQT exam:</p>
+            <ul>
+                <li>Thoroughly study the entire TCS NQT syllabus.</li>
+                <li>Solve previous year papers and sample papers to get an idea of the type of questions asked in the exam.</li> 
+                <li>Practice regularly to improve your speed and accuracy.</li>
+                <li>Focus on your weak areas and try to improve them.</li>
+                <li>Get enough sleep and eat a healthy meal on the day of the exam.</li>
+            </ul>
+        </div>
+    </div>
+  </div> 
+  
+</body>
+</html>

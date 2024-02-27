@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <title>Document</title>
+<script>
+    var http =  new XMLHttpRequest();
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            // console.log(this.response);
+            // console.log(JSON.parse(this.response));
+            var response = JSON.parse(this.response);
+            var tableTag=`<table class="table table-bordered table-danger table-hover mt-5">`;
+                tableTag +=` <thead class="text-center"><tr><th>Topic Name</th><th>Time(in minutes)</th><th>Questions</th></tr></thead>`;
+                
+                tableTag += `<tbody>`;
+                response.forEach(function(value) {
+                // console.log(value);  
+                tableTag += `<tr>`;
+                tableTag += `<td>${value.topic_name}</td>`;
+                tableTag += `<td>${value.time}</td>`;
+                tableTag += `<td>${value.ques}</td>`;
+                tableTag += `</tr>`;
+            });
+
+                tableTag += `<tbody>`;
+                tableTag += `</table>`;
+                document.getElementById("userData").innerHTML=tableTag;
+           }
+    }
+    http.open("GET","/get-infosys-data",true);
+    http.send();
+
+    // var http1 =  new XMLHttpRequest();
+    // http1.onreadystatechange = function(){
+    //     if(this.readyState == 4 && this.status == 200){
+    //         // console.log(this.response);
+    //         // console.log(JSON.parse(this.response));
+           
+    //           var response = JSON.parse(this.response);
+    //           var tableTag=`<table class="table table-bordered table-success table-hover mt-5 text-center" >`;
+    //             tableTag +=`  <thead><tr><th>TCS NQT Paper Pattern 2023 Advanced Section</th><th>Time(in minutes)</th></tr></thead>`;
+                
+    //             tableTag += `<tbody>`;
+    //             response.forEach(function(value) {
+    //             // console.log(value);  
+    //             tableTag += `<tr>`;
+    //             tableTag += `<td>${value.Advanced_Section}</td>`;
+    //             tableTag += `<td>${value.Time}</td>`;
+    //             tableTag += `</tr>`;
+    //         });
+
+    //             tableTag += `<tbody>`;
+    //             tableTag += `</table>`;
+                
+                
+    
+    //           document.getElementById("userData_1").innerHTML=tableTag;
+
+    //     }
+    // }
+   
+
+    // http1.open("GET","/get-tcs-data-1",true);
+    // http1.send();
+
+</script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top pb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/pic13.jpg" width="50px" height="50px" style="border-radius: 50%;">Prep Placed</a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="About-us.html">About Us</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contact-us.html">Contact Us</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Admin_Signup.html">Admin Signup</a>
+                    </li>
+                    
+    
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 style="text-align:center">Infosys Syllabus</h1>
+            <p style="margin-top: 25px;">The Infosys paper is a written test that is administered to candidates as part of the company's recruitment process. The test is designed to assess the candidate's English language skills, quantitative aptitude, logical reasoning skills, and pseudocode writing ability.</p>
+            <p style="margin-top: 25px;font-weight: bold;">The paper is divided into four sections:</p>
+            <ul>
+                <li><span style="font-weight: bold;">Verbal Ability:- </span>This section tests the candidate's ability to read and understand English text. It includes questions on reading comprehension, vocabulary, grammar, and sentence correction.</li>
+                <li><span style="font-weight: bold;">Quantitative Ability:- </span>This section tests the candidate's basic mathematical skills. It includes questions on arithmetic, algebra, geometry, and trigonometry.</li>
+                <li><span style="font-weight: bold;">Logical Reasoning:- </span>This section tests the candidate's basic mathematical skills. It includes questions on arithmetic, algebra, geometry, and trigonometry.</li>
+                <li><span style="font-weight: bold;">Pseudocode</span>This section tests the candidate's ability to write pseudocode for simple problems. Pseudocode is a plain English description of how to solve a problem, step-by-step.</li>
+            </ul>
+    </div>
+    </div>
+  </div> 
+  <div class="container" id="userData"></div>
+  <div class="container" id="userData_1"></div>
+
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <p style="margin-top: 25px;">Tips for preparing for the TCS NQT exam:</p>
+            <ul>
+                <li>Thoroughly study the entire Infosys syllabus.</li>
+                <li>Solve previous year papers and sample papers to get an idea of the type of questions asked in the exam.</li> 
+                <li>Practice regularly to improve your speed and accuracy.</li>
+                <li>Focus on your weak areas and try to improve them.</li>
+                <li>Get enough sleep and eat a healthy meal on the day of the exam.</li>
+            </ul>
+        </div>
+    </div>
+  </div> 
+  
+</body>
+</html>
