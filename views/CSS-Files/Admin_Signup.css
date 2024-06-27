@@ -25,6 +25,7 @@ body::before {
     background-size: cover;
 }
 
+
 nav {
     position: fixed;
     padding: 25px 60px;
